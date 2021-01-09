@@ -6,6 +6,7 @@ vacuum_ip = "YOUR_VACUUM_CLEANER_IP"
 vacuum_token = "YOUR_TOKEN"
 cloud_user_id = "YOUR_MI_ACCOUNT_ID"
 cloud_user_password = "YOUR_MI_ACCOUNT_PASSWORD"
+cloud_country = "ru"
 
 map_link = "retry"
 if not (vacuum_ip == "" or vacuum_token == ""):
@@ -26,4 +27,4 @@ mc = MiCloud(cloud_user_id, cloud_user_password)
 mc.login()
 cloud_token = mc.get_token()
 device_list = mc.get_devices()
-mc.download_vacuum_map(country="ru", map_id=map_link)
+mc.download_vacuum_map(country=cloud_country, map_id=map_link)
